@@ -1,0 +1,63 @@
+mysq –u [user] -p     Se utiliza para iniciar sesion con Mysql.
+
+SHOW DATABSES;     Se utiliza para visualizar las bases de datos en tu Mysql.
+
+CREATE DATABASE [NOMBRE DE LA BD];    Se utiliza para crear una base de datos en tu Mysql.
+
+DROP DATABASE [Base de datos];   Se utiliza para borrar una base de datos en tu Mysql.
+
+USE [Base de datos];  Permite seleccionar una base de datos para administrar cada uno de los objetos de la base de datos.
+
+CREATE TABLE table_name (
+	column1 datatype,
+	column2 datatype,
+	column3 datatype,
+	);    Permite crear una tabla en la base de datos seleccionada con el comando USE.
+	
+	Ejemplo
+	mysql> CREATE TABLE comentarios( 
+    		-> idComentario INT PRIMARY KEY AUTO_INCREMENT,
+    		-> comentario     varchar(100),
+    		-> fecha DATE
+    		-> );
+	Query OK, 0 rows affected (0,02 sec)
+
+	mysql>
+	
+SHOW TABLES;   Se utiliza para visualizar las tablas en de la base de datos que estas utilizando.
+
+DROP TABLE table_name;  Se utiliza para eliminar una tabla en la base de datos que estas utilizando.
+
+DESCRIBE table_name; Se utiliza para visualizar de forma detallada la tabla.
+
+ALTER TABLE table_name
+	-> ADD colum_name  datatype;     Permite modificar la estructura de una tabla existente 	
+	en la base de datos.
+	
+ALTER TABLE table_name
+	-> DROP colum_name;     Permite eliminar una columna de una tabla existente en la base 
+	de datos.
+	
+ALTER TABLE table_name
+	-> RENAME COLUMN old_name to new_name;     Permite renombrar una columna de una tabla 
+	existente en la base de datos.
+	
+ALTER TABLE table_name
+	-> MODIFY COLUMN colum_name datatype;     Permite modificar el tipo de dato de una 
+	columna de una tabla existente en la base de datos.
+	
+ALTER TABLE table_name
+	-> ADD CONSTRAINT PK_Name PRIMARY KEY (name_column) ;     Permite agregar una llave  
+	primaria a una columna de una tabla existente en la base de datos.
+	
+	
+INSERT INTO table_name (column_name)
+	-> VALUES ('dato1'),('dato2'),('dato3'),('dato4');  Permite agregar nuevos registros a 
+	la tabla seleccionada en la consulta SQL.
+	
+SELECT name_column,name_column,name_column
+	-> FROM table_name;  Permite visualizar las columnas dentro la tabla seleccionada.
+	
+	
+	
+	
