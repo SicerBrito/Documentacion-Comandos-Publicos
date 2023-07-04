@@ -1,0 +1,239 @@
+apolm01-017@rootap-9048-900-0044:~$ ls
+bootstrap-5.2.3-dist  Documents  Music     Public  Templates
+Desktop               Downloads  Pictures  snap    Videos
+
+apolm01-017@rootap-9048-900-0044:~$ cd Videos
+
+apolm01-017@rootap-9048-900-0044:~/Videos$ ls
+tienda
+
+apolm01-017@rootap-9048-900-0044:~/Videos$ mkdir vaina
+
+apolm01-017@rootap-9048-900-0044:~/Videos$ ls
+tienda  vaina
+
+apolm01-017@rootap-9048-900-0044:~/Videos$ cd vaina
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet --version
+7.0.108
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet -h
+Usage: dotnet [runtime-options] [path-to-application] [arguments]
+
+Execute a .NET application.
+
+runtime-options:
+  --additionalprobingpath <path>   Path containing probing policy and assemblies to probe for.
+  --additional-deps <path>         Path to additional deps.json file.
+  --depsfile                       Path to <application>.deps.json file.
+  --fx-version <version>           Version of the installed Shared Framework to use to run the application.
+  --roll-forward <setting>         Roll forward to framework version  (LatestPatch, Minor, LatestMinor, Major, LatestMajor, Disable).
+  --runtimeconfig                  Path to <application>.runtimeconfig.json file.
+
+path-to-application:
+  The path to an application .dll file to execute.
+
+Usage: dotnet [sdk-options] [command] [command-options] [arguments]
+
+Execute a .NET SDK command.
+
+sdk-options:
+  -d|--diagnostics  Enable diagnostic output.
+  -h|--help         Show command line help.
+  --info            Display .NET information.
+  --list-runtimes   Display the installed runtimes.
+  --list-sdks       Display the installed SDKs.
+  --version         Display .NET SDK version in use.
+
+SDK commands:
+  add               Add a package or reference to a .NET project.
+  build             Build a .NET project.
+  build-server      Interact with servers started by a build.
+  clean             Clean build outputs of a .NET project.
+  format            Apply style preferences to a project or solution.
+  help              Show command line help.
+  list              List project references of a .NET project.
+  msbuild           Run Microsoft Build Engine (MSBuild) commands.
+  new               Create a new .NET project or file.
+  nuget             Provides additional NuGet commands.
+  pack              Create a NuGet package.
+  publish           Publish a .NET project for deployment.
+  remove            Remove a package or reference from a .NET project.
+  restore           Restore dependencies specified in a .NET project.
+  run               Build and run a .NET project output.
+  sdk               Manage .NET SDK installation.
+  sln               Modify Visual Studio solution files.
+  store             Store the specified assemblies in the runtime package store.
+  test              Run unit tests using the test runner specified in a .NET project.
+  tool              Install or manage tools that extend the .NET experience.
+  vstest            Run Microsoft Test Engine (VSTest) commands.
+  workload          Manage optional workloads.
+
+Additional commands from bundled tools:
+  dev-certs         Create and manage development certificates.
+  fsi               Start F# Interactive / execute F# scripts.
+  user-jwts         Manage JSON Web Tokens in development.
+  user-secrets      Manage development user secrets.
+  watch             Start a file watcher that runs a command when files change.
+
+Run 'dotnet [command] --help' for more information on a command.
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new -h
+Description:
+  Template Instantiation Commands for .NET CLI.
+
+Usage:
+  dotnet new [<template-short-name> [<template-args>...]] [options]
+  dotnet new [command] [options]
+
+Arguments:
+  <template-short-name>  A short name of the template to create.
+  <template-args>        Template specific options to use.
+
+Options:
+  -o, --output <output>    Location to place the generated output.
+  -n, --name <name>        The name for the output being created. If no name is 
+                           specified, the name of the output directory is used.
+  --dry-run                Displays a summary of what would happen if the given 
+                           command line were run if it would result in a 
+                           template creation.
+  --force                  Forces content to be generated even if it would 
+                           change existing files.
+  --no-update-check        Disables checking for the template package updates 
+                           when instantiating a template.
+  --project <project>      The project that should be used for context 
+                           evaluation.
+  -v, --verbosity <LEVEL>  Sets the verbosity level. Allowed values are 
+                           q[uiet], m[inimal], n[ormal], and diag[nostic]. 
+                           [default: normal]
+  -d, --diagnostics        Enables diagnostic output.
+  -?, -h, --help           Show command line help.
+
+Commands:
+  create <template-short-name>   Instantiates a template with given short name. 
+  <template-args>                An alias of 'dotnet new <template name>'.
+  install <package>              Installs a template package.
+  uninstall <package>            Uninstalls a template package.
+  update                         Checks the currently installed template 
+                                 packages for update, and install the updates.
+  search <template-name>         Searches for the templates on NuGet.org.
+  list <template-name>           Lists templates containing the specified 
+                                 template name. If no name is specified, lists 
+                                 all templates.
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new -l
+Warning: use of 'dotnet new --list' is deprecated. Use 'dotnet new list' instead.
+For more information, run: 
+   dotnet new list -h
+
+These templates matched your input: 
+
+Template Name       Short Name          Language    Tags                            
+------------------  ------------------  ----------  --------------------------------
+ASP.NET Core Empty  web                 [C#],F#     Web/Empty                       
+ASP.NET Core gR...  grpc                [C#]        Web/gRPC                        
+ASP.NET Core We...  webapi              [C#],F#     Web/WebAPI                      
+ASP.NET Core We...  webapp,razor        [C#]        Web/MVC/Razor Pages             
+ASP.NET Core We...  mvc                 [C#],F#     Web/MVC                         
+ASP.NET Core wi...  angular             [C#]        Web/MVC/SPA                     
+ASP.NET Core wi...  react               [C#]        Web/MVC/SPA                     
+Blazor Server App   blazorserver        [C#]        Web/Blazor                      
+Blazor Server A...  blazorserver-empty  [C#]        Web/Blazor/Empty                
+Blazor WebAssem...  blazorwasm          [C#]        Web/Blazor/WebAssembly/PWA      
+Blazor WebAssem...  blazorwasm-empty    [C#]        Web/Blazor/WebAssembly/PWA/Empty
+Class Library       classlib            [C#],F#,VB  Common/Library                  
+Console App         console             [C#],F#,VB  Common/Console                  
+dotnet gitignor...  gitignore                       Config                          
+Dotnet local to...  tool-manifest                   Config                          
+EditorConfig file   editorconfig                    Config                          
+global.json file    globaljson                      Config                          
+MSTest Test Pro...  mstest              [C#],F#,VB  Test/MSTest                     
+MVC ViewImports     viewimports         [C#]        Web/ASP.NET                     
+MVC ViewStart       viewstart           [C#]        Web/ASP.NET                     
+NuGet Config        nugetconfig                     Config                          
+NUnit 3 Test Item   nunit-test          [C#],F#,VB  Test/NUnit                      
+NUnit 3 Test Pr...  nunit               [C#],F#,VB  Test/NUnit                      
+Protocol Buffer...  proto                           Web/gRPC                        
+Razor Class Lib...  razorclasslib       [C#]        Web/Razor/Library               
+Razor Component     razorcomponent      [C#]        Web/ASP.NET                     
+Razor Page          page                [C#]        Web/ASP.NET                     
+Solution File       sln,solution                    Solution                        
+Web Config          webconfig                       Config                          
+Worker Service      worker              [C#],F#     Common/Worker/Web               
+xUnit Test Project  xunit               [C#],F#,VB  Test/xUnit                      
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new sln
+The template "Solution File" was created successfully.
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dir
+vaina.sln
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ code
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ code .
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new webapi -o API
+The template "ASP.NET Core Web API" was created successfully.
+
+Processing post-creation actions...
+Restoring /home/apolm01-017/Videos/vaina/API/API.csproj:
+  Determining projects to restore...
+  Restored /home/apolm01-017/Videos/vaina/API/API.csproj (in 236 ms).
+Restore succeeded.
+
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln add API/
+Project `API/API.csproj` added to the solution.
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new classLib -o Core
+No templates or subcommands found matching: 'classLib'.
+Did you mean one of the following templates?
+   dotnet new classlib
+
+To list installed templates similar to 'classLib', run:
+   dotnet new list classLib
+To search for the templates on NuGet.org, run:
+   dotnet new search classLib
+
+
+For details on the exit code, refer to https://aka.ms/templating-exit-codes#103
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new classlib -o Core
+The template "Class Library" was created successfully.
+
+Processing post-creation actions...
+Restoring /home/apolm01-017/Videos/vaina/Core/Core.csproj:
+  Determining projects to restore...
+  Restored /home/apolm01-017/Videos/vaina/Core/Core.csproj (in 67 ms).
+Restore succeeded.
+
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln add Core/
+Project `Core/Core.csproj` added to the solution.
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new classlib -o Infraestructure
+The template "Class Library" was created successfully.
+
+Processing post-creation actions...
+Restoring /home/apolm01-017/Videos/vaina/Infraestructure/Infraestructure.csproj:
+  Determining projects to restore...
+  Restored /home/apolm01-017/Videos/vaina/Infraestructure/Infraestructure.csproj (in 97 ms).
+Restore succeeded.
+
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln add Infraestructure/
+Project `Infraestructure/Infraestructure.csproj` added to the solution.
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln list
+Project(s)
+----------
+API/API.csproj
+Core/Core.csproj
+Infraestructure/Infraestructure.csproj
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ cd Infraestructure/
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina/Infraestructure$ dotnet add reference ../Core/
+Reference `..\Core\Core.csproj` added to the project.
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina/Infraestructure$ cd ..
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ cd API/
+
+apolm01-017@rootap-9048-900-0044:~/Videos/vaina/API$ dotnet add reference ../Infraestructure/
+Reference `..\Infraestructure\Infraestructure.csproj` added to the project.
+
+
