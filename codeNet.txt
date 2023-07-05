@@ -1,21 +1,89 @@
+dotnet --version	-> Se utiliza para mostrar la versión instalada de la plataforma .NET Core en tu sistema
+
+
+dotnet -h	-> Se utiliza para mostrar la ayuda y la lista de comandos disponibles en la CLI (Interfaz de Línea de Comandos) de .NET Core.
+
+
+dotnet new -h    °    dotnet new --help		-> Se utiliza para obtener ayuda específica sobre el comando "dotnet new" en la CLI de .NET Core.
+
+
+dotnet new -l    °    dotnet new list		-> Se utiliza para mostrar una lista de las plantillas disponibles para crear nuevos proyectos en la CLI de .NET Core.
+
+
+dotnet new sln		-> Se utiliza para crear un nuevo archivo de solución (solution) en la CLI de .NET Core.  (Una solución es un archivo de nivel superior en .NET que agrupa múltiples proyectos relacionados. Proporciona una estructura organizada para gestionar y construir varios proyectos dentro de un mismo contexto.)
+
+
+dotnet new webapi -o API	-> Se utiliza para crear un nuevo proyecto de API web en la CLI de .NET Core.
+
+
+dotnet sln add API/		-> Se utiliza para agregar un proyecto existente a un archivo de solución (solution) en la CLI de .NET Core.
+
+
+dotnet new classlib -o Core		-> Se utiliza para crear un nuevo proyecto de biblioteca de clases en la CLI de .NET Core.
+
+
+dotnet sln add Core/		-> Se utiliza para agregar un proyecto existente a un archivo de solución (solution) en la CLI de .NET Core.
+
+
+dotnet new classlib -o Infraestructure		-> Se utiliza para crear un nuevo proyecto de biblioteca de clases en la CLI de .NET Core.
+
+
+dotnet sln add Infraestructure/		-> Se utiliza para agregar un proyecto existente a un archivo de solución (solution) en la CLI de .NET Core.
+
+
+dotnet sln list		-> Se utiliza para mostrar la lista de proyectos incluidos en un archivo de solución (solution) en la CLI de .NET Core.
+
+
+cd Infraestructure/    +    dotnet add reference ../Core/	 -> Se utiliza para agregar una referencia a un proyecto en otro proyecto de la CLI de .NET Core.   (te permite establecer una dependencia entre proyectos, lo que permite que tu proyecto actual utilice y acceda al código y funcionalidad del proyecto referenciado.)
+
+
+cd ..
+
+
+cd API/    +    dotnet add reference ../Infraestructure/	 -> Se utiliza para agregar una referencia a un proyecto en otro proyecto de la CLI de .NET Core.   (te permite establecer una dependencia entre proyectos, lo que permite que tu proyecto actual utilice y acceda al código y funcionalidad del proyecto referenciado.)
+
+
+
+
+
+
+
+
+
+EXAMPLE
+
 apolm01-017@rootap-9048-900-0044:~$ ls
 bootstrap-5.2.3-dist  Documents  Music     Public  Templates
 Desktop               Downloads  Pictures  snap    Videos
 
+
+
 apolm01-017@rootap-9048-900-0044:~$ cd Videos
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos$ ls
 tienda
 
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos$ mkdir vaina
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos$ ls
 tienda  vaina
 
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos$ cd vaina
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet --version
 7.0.108
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet -h
 Usage: dotnet [runtime-options] [path-to-application] [arguments]
@@ -77,6 +145,9 @@ Additional commands from bundled tools:
   watch             Start a file watcher that runs a command when files change.
 
 Run 'dotnet [command] --help' for more information on a command.
+
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new -h
 Description:
   Template Instantiation Commands for .NET CLI.
@@ -120,6 +191,8 @@ Commands:
                                  template name. If no name is specified, lists 
                                  all templates.
 
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new -l
 Warning: use of 'dotnet new --list' is deprecated. Use 'dotnet new list' instead.
 For more information, run: 
@@ -161,8 +234,13 @@ Web Config          webconfig                       Config
 Worker Service      worker              [C#],F#     Common/Worker/Web               
 xUnit Test Project  xunit               [C#],F#,VB  Test/xUnit                      
 
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new sln
 The template "Solution File" was created successfully.
+
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dir
 vaina.sln
@@ -178,20 +256,12 @@ Restoring /home/apolm01-017/Videos/vaina/API/API.csproj:
 Restore succeeded.
 
 
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln add API/
 Project `API/API.csproj` added to the solution.
-apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new classLib -o Core
-No templates or subcommands found matching: 'classLib'.
-Did you mean one of the following templates?
-   dotnet new classlib
-
-To list installed templates similar to 'classLib', run:
-   dotnet new list classLib
-To search for the templates on NuGet.org, run:
-   dotnet new search classLib
 
 
-For details on the exit code, refer to https://aka.ms/templating-exit-codes#103
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet new classlib -o Core
 The template "Class Library" was created successfully.
 
@@ -200,6 +270,7 @@ Restoring /home/apolm01-017/Videos/vaina/Core/Core.csproj:
   Determining projects to restore...
   Restored /home/apolm01-017/Videos/vaina/Core/Core.csproj (in 67 ms).
 Restore succeeded.
+
 
 
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln add Core/
@@ -214,8 +285,11 @@ Restoring /home/apolm01-017/Videos/vaina/Infraestructure/Infraestructure.csproj:
 Restore succeeded.
 
 
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln add Infraestructure/
 Project `Infraestructure/Infraestructure.csproj` added to the solution.
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ dotnet sln list
 Project(s)
@@ -224,16 +298,26 @@ API/API.csproj
 Core/Core.csproj
 Infraestructure/Infraestructure.csproj
 
+
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ cd Infraestructure/
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina/Infraestructure$ dotnet add reference ../Core/
 Reference `..\Core\Core.csproj` added to the project.
 
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina/Infraestructure$ cd ..
+
+
 
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina$ cd API/
 
+
+
 apolm01-017@rootap-9048-900-0044:~/Videos/vaina/API$ dotnet add reference ../Infraestructure/
 Reference `..\Infraestructure\Infraestructure.csproj` added to the project.
-
 
