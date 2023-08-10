@@ -1,4 +1,4 @@
-mysq –u [user] -p     Se utiliza para iniciar sesion con Mysql.
+mysql –u [user] -p     Se utiliza para iniciar sesion con Mysql.
 
 SHOW DATABSES;     Se utiliza para visualizar las bases de datos en tu Mysql.
 
