@@ -13,6 +13,7 @@
 
 
 
+<div style="background-color: #FF0000">
 
 ## Índice 📑
 
@@ -32,7 +33,7 @@
             - [Instalacion de Paquetes](#instalacion-de-paquetes-🔧)
             - [Migrations](#migrations-✈️)
 
-
+</div>
 
 ## Documentación
 
