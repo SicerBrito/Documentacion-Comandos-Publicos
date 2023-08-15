@@ -13,7 +13,6 @@
 
 
 
-<div style="background-color: #FF0000">
 
 ## Índice 📑
 
@@ -26,14 +25,13 @@
             - [Agregar Repositorio de Microsoft](#agregar-repositorio-de-microsoft)
             - [Instalación de NetCore](#instalación-de-netcore)
             - [Verificación](#verificación)
-        - [Comandos Basicos](#terminal-🔓)
+        - [Comandos Basicos](#comandos-basicos)
             - [Estructura Base](#estructura-base-🚧)
             - [Referencias](#referencias-🔗)
         - [Gestión de Datos](#gestión-de-datos-🧑‍💻)
             - [Instalacion de Paquetes](#instalacion-de-paquetes-🔧)
             - [Migrations](#migrations-✈️)
 
-</div>
 
 ## Documentación
 
@@ -65,35 +63,90 @@
 
         Reemplaza "22.04.3 LTS" con el nombre de la versión de Ubuntu que estés utilizando si es diferente
 
-    - ### Instalación de NetCore
+    - ### Instalación de NetCore 
         Actualiza los paquetes e instala .NET Core ✅
 
             sudo apt update
             sudo apt install dotnet-sdk-7.0
 
         Cambia 7.0 por la versión de .NET Core que quieras instalar.
+
     - ### Verificación
+
         Verifica que .NET Core se haya instalado correctamente ✅
 
             dotnet --version
 
 <img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200908124347/Differences-Between-.NET-Core-and-.NET-Framework.png" width="3000px">
 
-### Comandos Basicos
----
+ - ### Comandos Basicos
+    ---
+        dotnet new
+        
+    Crea un nuevo proyecto o archivo basado en una plantilla. Puedes usarlo para crear aplicaciones de consola, aplicaciones web, bibliotecas y más.
 
-    dotnet new:
-    
-Crea un nuevo proyecto o archivo basado en una plantilla. Puedes usarlo para crear aplicaciones de consola, aplicaciones web, bibliotecas y más.
+    Ejemplo: dotnet new console -n MiProyecto
 
-Ejemplo: dotnet new console -n MiProyecto
+    ---
+        dotnet build
 
----
+    Compila un proyecto y sus dependencias. Genera los archivos binarios y los coloca en la carpeta de salida.
 
-    dotnet build:
+    Ejemplo: dotnet build
 
-Compila un proyecto y sus dependencias. Genera los archivos binarios y los coloca en la carpeta de salida.
+    ---
+        dotnet run
 
-Ejemplo: dotnet build
+    Compila y ejecuta un proyecto en una sola acción. Es útil para probar rápidamente una aplicación.
 
----
+    Ejemplo: dotnet run
+
+    ---
+        dotnet publish
+    Publica una aplicación para su implementación. Esto compila y empaqueta la aplicación para que pueda ser ejecutada en un entorno específico.
+
+    Ejemplo: dotnet publish -c Release -o MiPublicacion
+
+    ---
+        dotnet restore
+    Restaura las dependencias de un proyecto. Descarga los paquetes NuGet especificados en el archivo .csproj.
+
+    Ejemplo: dotnet restore
+
+    ---
+        dotnet test
+    Ejecuta las pruebas unitarias en un proyecto. Busca y ejecuta las pruebas definidas en el proyecto.
+
+    Ejemplo: dotnet test
+
+    ---
+        dotnet clean
+    Limpia los archivos generados por la compilación, como los binarios y los archivos intermedios.
+
+    Ejemplo: dotnet clean
+
+    ---
+        dotnet new solution
+    Crea una nueva solución que puede contener varios proyectos. Es útil para organizar proyectos relacionados.
+
+    Ejemplo: dotnet new solution -n MiSolucion
+
+    ---
+        dotnet sln
+    Gestiona soluciones que contienen múltiples proyectos. Puedes agregar, quitar o listar proyectos en la solución.
+
+    Ejemplo: dotnet sln MiSolucion.sln add MiProyecto/MiProyecto.csproj
+
+    ---
+        dotnet add
+    Agrega referencias o proyectos a una solución o a un proyecto.
+
+    Ejemplo: dotnet add MiProyecto/MiProyecto.csproj reference OtraBiblioteca/OtraBiblioteca.csproj
+
+    ---
+        dotnet new web
+    Crea un nuevo proyecto de aplicación web ASP.NET Core.
+
+    Ejemplo: dotnet new web -n MiAplicacionWeb
+
+    ---
